@@ -55,5 +55,7 @@ object Gram_array {
     println(s"最大值 = ${array_change.max}")
     println(s"排序 = ${array_change.sorted}")
     println(s"array_change = ${array_change.stringPrefix}")
+    println(s"排序小到大= ${array_change.sortWith(_ < _)}")
+    println(s"计数大于50的元素个数 = ${array_change.count(_ > 50)}")
   }
 }
