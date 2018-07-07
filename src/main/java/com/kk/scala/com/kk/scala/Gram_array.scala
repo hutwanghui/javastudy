@@ -49,13 +49,15 @@ object Gram_array {
 
     //数组转换，filter是过滤，接收一个返回值为boolean的函数,map相当于将数组中的每一个元素取出来，应用传进去的函数,_表示元素
     var array_change = arry_buffer.filter(_ % 2 == 0).map(_ * 10)
-    println(s"array_change = ${array_change.toBuffer}")
+    println(s"打印 = ${array_change.toBuffer}")
     //数组api
     println(s"求和 = ${array_change.sum}")
     println(s"最大值 = ${array_change.max}")
     println(s"排序 = ${array_change.sorted}")
+    println(s"反转 = ${array_change.sorted.reverse}")
     println(s"array_change = ${array_change.stringPrefix}")
     println(s"排序小到大= ${array_change.sortWith(_ < _)}")
     println(s"计数大于50的元素个数 = ${array_change.count(_ > 50)}")
+
   }
 }
