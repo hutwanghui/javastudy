@@ -5,9 +5,9 @@ package com.kk.scala.com.kk.scala
   */
 object Gram_test_class {
   def main(args: Array[String]): Unit = {
-    val gram_class = new Gram_class
-    println(s"gram_class = ${gram_class.toString}")
-    val gram_class_constructor = new Gram_class_constructor("Wanhui", 21)
+    //val gram_class = new Gram_class()
+    //println(s"gram_class = ${gram_class.toString}")
+    val gram_class_constructor = new Gram_class_constructor("Wanhui", 21, "male")
     println(s"gram_class_constructor = ${gram_class_constructor}")
   }
 }

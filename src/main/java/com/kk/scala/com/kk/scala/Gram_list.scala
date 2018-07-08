@@ -39,11 +39,15 @@ object Gram_list {
     println(s"list初值为10的聚合 = ${result_2}")
     //交集
     val r1 = l1.intersect(l2)
-
+    println(s"l1与l1的交集 = ${r1}")
     //并集
     val r2 = l1.union(l2)
     println(s"l1与l2的并集 = ${r2}")
     //差集
+    val r3 = l2.diff(l1)
+    println(s"l2与l1的差集 = ${r3}")
 
+    //编译不报错，但是运行是报错的，因为是私有构造
+    //val gram_class = new Gram_class
   }
 }
