@@ -25,7 +25,8 @@ public class MyTryLock {
 						// TODO: handle exception
 					} finally {
 						System.out.println(thread.getName() + "释放了锁");
-						lock.unlock();
+						//将其注释了，就会出现Thread1无法执行，因为Trylock无法获取锁
+						//lock.unlock();
 					}
 				}
 			};
@@ -49,7 +50,6 @@ public class MyTryLock {
 						lock.unlock();
 					}
 				}
-
 			};
 		}.start();
 	}
