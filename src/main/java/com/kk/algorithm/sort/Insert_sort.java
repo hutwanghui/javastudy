@@ -8,6 +8,8 @@ package com.kk.algorithm.sort;
 
 /**
  * 时间复杂度。最好O(N)比如已经排好序的,最坏O(N^2)
+ * 空间复杂度，O(1)
+ * 思路类似扑克牌抽牌插入
  */
 public class Insert_sort {
 

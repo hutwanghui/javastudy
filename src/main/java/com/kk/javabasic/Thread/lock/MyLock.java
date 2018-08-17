@@ -19,6 +19,7 @@ public class MyLock {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            System.out.println(Thread.currentThread().getName() + "锁释放");
             lock.unlock();
         }
     }

@@ -1,9 +1,6 @@
 package com.kk.algorithm.array;
 
-import scala.Int;
-
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**

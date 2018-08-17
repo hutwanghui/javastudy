@@ -29,7 +29,7 @@ public class DeadThread implements Runnable {
 
             }
         }
-        if(username.equals("b")){
+        if (username.equals("b")) {
             synchronized (lock2) {
                 try {
                     System.out.println(Thread.currentThread().getName() + "进入lock2代码块" + "username=" + username);
@@ -44,5 +44,16 @@ public class DeadThread implements Runnable {
 
             }
         }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        DeadThread deadThread = new DeadThread();
+        deadThread.setFlag("a");
+        Thread myThread1 = new Thread(deadThread);
+        myThread1.start();
+        Thread.sleep(100);
+        deadThread.setFlag("b");
+        Thread myThread2 = new Thread(deadThread);
+        myThread2.start();
     }
 }

@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 
 /**
  * Future虽然可以实现获取异步执行结果的需求，但是它没有提供通知的机制，我们无法得知Future什么时候完成。
- * 推荐使用get (long timeout, TimeUnit unit) 方法，设置了超时时间可以防止程序无限制的等待future的结果。
+ * 推荐使用get (long timeout, TimeUnit_demo unit) 方法，设置了超时时间可以防止程序无限制的等待future的结果。
  */
 public class ThreadPoolWithcallable implements Callable<String> {
 

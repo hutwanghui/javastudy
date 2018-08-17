@@ -14,6 +14,7 @@ class Gram_dateFormat {
 object Gram_dateFormat {
   def main(args: Array[String]): Unit = {
     val now = new Date
+    print(now)
     //df = 2018年7月10日
     val df = getDateInstance(LONG, Locale.CHINA)
     println(s"df = ${df format now}")

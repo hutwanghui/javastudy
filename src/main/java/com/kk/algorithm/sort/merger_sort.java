@@ -7,6 +7,11 @@ import com.kk.algorithm.util.ArrayUtils;
  * email:zjjhwanhui@163.com
  * qq:472860892
  */
+
+/**
+ * 时间复杂度是O(N*logN)，额外空间复杂度是O(N)
+ * 利用递归的思想，大而化小
+ */
 public class merger_sort {
 
     public static void mergerCore(int[] arr, int left, int right) {

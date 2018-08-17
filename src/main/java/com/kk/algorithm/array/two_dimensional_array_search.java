@@ -40,8 +40,7 @@ public class two_dimensional_array_search {
 
     public static void main(String[] args) {
         int i, j;
-        StringBuilder stringBuilder = new StringBuilder();
-        StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.length();
+
     }
+
 }
