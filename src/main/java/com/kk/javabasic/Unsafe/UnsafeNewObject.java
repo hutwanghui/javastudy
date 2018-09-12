@@ -1,15 +1,19 @@
+/*
 package com.kk.javabasic.Unsafe;
 
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 
+*/
 /**
  * Created by hutwanghui on 2018/8/9.
  * email:zjjhwanhui@163.com
  * qq:472860892
- */
+ *//*
 
+
+*/
 /**
  * Unsafe对象不能直接通过new Unsafe()或调用Unsafe.getUnsafe()获取，原因如下：
  * <p>
@@ -24,7 +28,8 @@ import java.lang.reflect.Field;
  * return theUnsafe;
  * }
  * }
- */
+ *//*
+
 public class UnsafeNewObject {
 
     class User {
@@ -91,3 +96,4 @@ public class UnsafeNewObject {
         return UNSAFE;
     }
 }
+*/

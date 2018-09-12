@@ -4,7 +4,7 @@ package com.kk.javabasic.Unsafe;
  * Created by hutwanghui on 2018/8/9.
  * email:zjjhwanhui@163.com
  * qq:472860892
- */
+ *//*
 
 import sun.misc.Unsafe;
 
@@ -26,3 +26,4 @@ public class UnsafeCAS {
         return UNSAFE;
     }
 }
+*/
