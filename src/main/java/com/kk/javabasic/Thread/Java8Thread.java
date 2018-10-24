@@ -17,3 +17,4 @@ public class Java8Thread {
         System.out.println("线程的名字：" + myThread.getName() + "\n线程状态：" + myThread.getState() + "\n线程ID：" + myThread.getId());
     }
 }
+

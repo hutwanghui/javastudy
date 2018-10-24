@@ -14,10 +14,11 @@ public class binarySearch {
             return -1;
         }
         if (arr.length == 1) {
-            if (key == arr[0])
+            if (key == arr[0]) {
                 return 0;
-            else
+            } else {
                 return -1;
+            }
         }
 
         int left = 0;
@@ -153,6 +154,8 @@ public class binarySearch {
         System.out.println(result3);
         int[] a = new int[] {1,4,9,3,24,21,6,9,9,7,6,5,3};
         int values = 4;
+        int result4 = search_DgFindOne(a, 4, 0, a.length - 1);
+        System.out.println(result4);
         twoDepart(a,0,a.length-1,values);
 
     }

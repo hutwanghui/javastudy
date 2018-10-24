@@ -12,7 +12,7 @@ public class ThreadPoolWithcallable_complateFuture {
                 @Override
                 public String call() throws Exception {
                     //System.out.println("a");
-                    Thread.currentThread().sleep(1000);
+                    Thread.sleep(1000);
                     return Thread.currentThread().getName();
                 }
             });

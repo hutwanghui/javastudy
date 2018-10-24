@@ -22,8 +22,9 @@ public class Methods {
             System.out.println(mod + " " + m.getName());
             //获取方法的参数类型
             Class<?>[] ps = m.getParameterTypes();
-            if (ps.length == 0)
+            if (ps.length == 0) {
                 System.out.print(')');
+            }
             for (int i = 0; i < ps.length; i++) {
                 char end = i == ps.length - 1 ? ')' : ',';
                 System.out.print(ps[i].getSimpleName() + end);

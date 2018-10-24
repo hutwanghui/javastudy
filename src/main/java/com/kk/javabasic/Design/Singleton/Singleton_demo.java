@@ -75,12 +75,13 @@ class Singleton_inner {
     }
 }
 
+//枚举
 class Singleton_resource {
 
     public static void main(String[] args) {
         Singleton_resource resource = Singleton_enum.INSTACE.getInstance();
         Singleton_resource resource1 = Singleton_enum.INSTACE.getInstance();
-        System.out.println(resource==resource1);
+        System.out.println(resource == resource1);
     }
 }
 
@@ -95,5 +96,45 @@ enum Singleton_enum {
 
     public Singleton_resource getInstance() {
         return resource;
+    }
+}
+
+//双重锁校验(没有使用Volatile修饰)
+class Singleton_Double {
+    //为了避免多线程情况下单例对象new多次的问题，加上volatile修饰
+    private static Singleton_Double singleton_double;
+
+    private Singleton_Double() {
+
+    }
+
+
+    public static Singleton_Double getInstance() {
+        if (singleton_double == null) {
+            synchronized (Singleton_Double.class) {
+                if (singleton_double == null) {
+                    singleton_double = new Singleton_Double();
+                }
+            }
+        }
+        return singleton_double;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10000; i++) {
+            Thread thread = new Thread(new ThreadSingleton());
+            thread.setName("thread" + i);
+            thread.start();
+        }
+    }
+
+    public static class ThreadSingleton implements Runnable {
+        @Override
+        public void run() {
+            Singleton_Double s = Singleton_Double.getInstance();
+            if (s == null) {
+                System.out.println("双重锁失效");
+            }
+        }
     }
 }

@@ -24,7 +24,7 @@ public class WaitAndNotify {
             while (queue.size() == MAX_SIZE) {
                 //区满，停止生产
                 try {
-                    System.out.println("仓库已满，【" + producer + "】： 暂时不能执行消费任务!");
+                    System.out.println("仓库已满，【" + producer + "】： 暂时不能执行生产任务!");
                     queue.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -55,7 +55,7 @@ public class WaitAndNotify {
 
     public static void main(String[] args) {
         WaitAndNotify waitAndNotify = new WaitAndNotify();
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 200; i++) {
             int finalI = i;
             new Thread(new Runnable() {
                 @Override

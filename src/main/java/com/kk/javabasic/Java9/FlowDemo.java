@@ -12,7 +12,7 @@ public class FlowDemo {
     public static void main(String[] args) {
         //发布者（Publisher）：生产可以被订阅者接收的数据
         SubmissionPublisher<String> publisher = new SubmissionPublisher<>();
-
+//        MyPublisher<String> publisher = new MyPublisher<>();
         MySubscriber<String> subscriber = new MySubscriber<String>();
         //将订阅者注册仅发布者
         publisher.subscribe(subscriber);

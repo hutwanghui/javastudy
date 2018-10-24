@@ -18,6 +18,8 @@ public class ArrangeString_recursion {
     }
 
     public static void main(String[] args) {
-
+        String str="asbcdefg";
+        System.out.println(str.charAt(4));
+        System.out.println(str.indexOf('d'));
     }
 }
