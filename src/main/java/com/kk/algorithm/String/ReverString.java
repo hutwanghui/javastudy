@@ -23,12 +23,13 @@ public class ReverString {
 
 
     public static void main(String[] args) {
-        String str = "abcdefg";
+        String str = "hello world";
         char[] chars = str.toCharArray();
-        reverString(chars, 0, 2);
-        reverString(chars, 3, chars.length - 1);
+//        reverString(chars, 0, 2);
+//        reverString(chars, 3, chars.length - 1);
         reverString(chars, 0, chars.length - 1);
-        System.out.println(chars);
+        System.out.println(        String.valueOf(chars));
+
         //结果：defgabc
     }
 }

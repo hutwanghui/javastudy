@@ -1,5 +1,7 @@
 package com.kk.algorithm.TreeNode;
 
+import java.util.Arrays;
+
 /**
  * Created by hutwanghui on 2018/8/10.
  * email:zjjhwanhui@163.com
@@ -27,6 +29,6 @@ public class binaryTree_qian {
     }
 
     public static void main(String[] args) {
-
+        Arrays.asList(1, 2, 3, 4, 5);
     }
 }
